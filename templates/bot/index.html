@@ -1,0 +1,15 @@
+{% extends "bot/base.html" %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to the Organic Bot !</h1>
+    {% if user.is_authenticated %}
+        <h2>Hello {{ user.username }}</h2>
+<a href="http://127.0.0.1:8000/bot/chaturbate_login/"><button type="button" class="btn btn-success">Start</button></a>
+<button type="button" class="btn btn-danger">Stop</button>
+    {% else %}
+        <h2>Register or Login if you'd like to</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
